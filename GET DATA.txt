@@ -1,0 +1,10 @@
+function getDataSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet()
+  var data = ss.getDataRange().getDisplayValues()
+  data.shift()
+  return data
+}
+function doGet(){
+  return HtmlService.createHtmlOutputFromFile('index')
+}
+
